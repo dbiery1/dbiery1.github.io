@@ -1,155 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name">
-    <meta name="description" content="A simple test website for GitHub Pages">
+   <title>About DJ</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Prof Winters">
+   <meta name="description" content="Web Page">
+   <meta name="keywords" content="HTML tags, Web code, web programming">
 
-    <title>My Test Website</title>
+   <style>
+      * { box-sizing: border-box; }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+      body {
+         margin: 0;
+         background-image: url(images/technology-background.jpg);
+         background-size: cover;
+         background-position: center;
+         background-attachment: fixed;
+         color: #000000;
+         font-family: Arial, Helvetica, sans-serif;
+      }
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #111827;
-            color: #f3f4f6;
-            line-height: 1.6;
-        }
+      .site {
+         width: 92%;
+         max-width: 1150px;
+         margin: 25px auto;
+         background: rgba(255,255,255,0.96);
+         box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+      }
 
-        header {
-            background: #030712;
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 2px solid #374151;
-        }
+      .banner {
+         width: 100%;
+         display: block;
+         height: 230px;
+         object-fit: cover;
+      }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+      nav {
+         background: #1e3a5f;
+         padding: 14px 10px;
+         text-align: center;
+         border-bottom: 4px solid #2563a6;
+      }
 
-        header p {
-            margin: 8px 0 0;
-            color: #9ca3af;
-        }
+      nav a {
+         color: #ffffff;
+         text-decoration: none;
+         font-weight: bold;
+         padding: 10px 22px;
+         margin: 0 4px;
+         display: inline-block;
+      }
 
-        nav {
-            background: #1f2937;
-            text-align: center;
-            padding: 15px;
-        }
+      nav a:hover {
+         background: #2563a6;
+      }
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+      main, footer {
+         padding: 10px 40px;
+      }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+      h1 {
+         text-align: center;
+         color: #1e3a5f;
+         font-family: Georgia, "Times New Roman", serif;
+         font-size: 38px;
+         margin: 22px 0 12px;
+      }
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+      h2 {
+         color: #1e3a5f;
+         font-family: Georgia, "Times New Roman", serif;
+         text-align: center;
+         margin-top: 28px;
+      }
 
-        section {
-            background: #1f2937;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-        }
+      p {
+         line-height: 1.5;
+      }
 
-        section h2 {
-            margin-top: 0;
-            color: #60a5fa;
-        }
+      hr {
+         border: 0;
+         height: 4px;
+         background: #6b7280;
+         width: 60%;
+         margin: 28px auto;
+      }
 
-        .button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 18px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+      .interest-images {
+         text-align: center;
+         margin: 20px 0;
+      }
 
-        .button:hover {
-            background: #1d4ed8;
-        }
+      .interest-images img {
+         width: 30%;
+         height: 220px;
+         object-fit: cover;
+         margin: 1%;
+         vertical-align: top;
+         border: 3px solid #1e3a5f;
+      }
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #030712;
-            color: #9ca3af;
-            margin-top: 40px;
-        }
-    </style>
+      .welcome-image {
+         max-width: 360px;
+         height: auto;
+         float: right;
+         margin: 0 0 15px 25px;
+         border: 3px solid #1e3a5f;
+      }
+
+      footer {
+         background: #e5e7eb;
+         border-top: 4px solid #1e3a5f;
+         margin-top: 30px;
+         padding-bottom: 25px;
+      }
+
+      @media (max-width: 700px) {
+         .site { width: 96%; }
+         main, footer { padding: 10px 20px; }
+         .banner { height: 170px; }
+         .interest-images img { width: 90%; height: auto; }
+         .welcome-image { float: none; max-width: 100%; margin: 10px auto; display: block; }
+      }
+   </style>
+
+   <!-- Created on August 18, 2026 -->
 </head>
 
 <body>
 
-    <header>
-        <h1>My Test Website</h1>
-        <p>Testing GitHub Pages</p>
-    </header>
+   <div class="site">
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+   <header>
+      <img class="banner" src="images/technology-foreground.jpg" alt="Technology workstation with computer equipment">
+      <h1>About DJ</h1>
+   </header>
 
-    <main>
+   <nav>
+      <a href="#interests">My Interests</a>
+      <a href="#education">Educational Goals</a>
+      <a href="#contact">Contact</a>
+   </nav>
 
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>
-                Welcome to my first website hosted using GitHub Pages.
-                This page is being used to test that my website is working correctly.
-            </p>
+   <main>
 
-            <a class="button" href="https://github.com/" target="_blank">
-                Visit GitHub
-            </a>
-        </section>
+      <h2>Welcome</h2>
 
-        <section id="about">
-            <h2>About This Website</h2>
-            <p>
-                This website was created using HTML and CSS.
-                The CSS is included directly inside the HTML file, so no
-                additional files are required.
-            </p>
+      <div>
 
-            <p>
-                If you can see this page through my GitHub Pages URL,
-                then my hosting setup is working.
-            </p>
-        </section>
+      <p>
+         My name is DJ, and I am a college student with a strong interest in computers, technology, and cybersecurity. I have always enjoyed
+         learning how technology works and finding ways to solve problems using computers and other electronic devices. My goal is to continue
+         building my technical skills through college, personal projects, and hands-on experience.
+      </p>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                This is a test section for future website content.
-            </p>
-        </section>
+      <h2 id="interests">My Interests</h2>
+      <div class="interest-images">
+         <img src="images/computer-hardware.jpg" alt="Computer hardware" >
+         <img src="images/car.png" alt="Car representing an interest in automobiles" >
+         <img src="images/3d-printing.jpg" alt="3D printer creating a printed object" >
+         <img src="images/computer-technology.jpg" alt="Computer technology and workstation" >
+      </div>
+      <hr>
 
-    </main>
+      <p>
+         Some of my main interests include:
+      </p>
+      <ul>
+         <li>Building and working with computers</li>
+         <li>Learning about computer hardware and software</li>
+         <li>Exploring different areas of information technology</li>
+         <li>Working on technology-related projects outside of school</li>
+         <li>Learning through hands-on experimentation and problem solving</li>
+      </ul>
 
-    <footer>
-        <p>&copy; 2026 My Test Website</p>
-    </footer>
+      <p>
+         Outside of my college coursework, I enjoy several different hobbies and interests that involve technology and hands-on projects. I like
+         working on computers, experimenting with electronics, learning about cars, and working with 3D printing. These hobbies give me a chance to
+         learn through experimentation and problem solving rather than only learning from a textbook. I also enjoy discovering new technologies
+         and understanding how they can be used to create useful or interesting projects.
+      </p>
+
+      <h2 id="education">My Educational Goals</h2>
+
+      <p>
+         I am currently earning an <b>Associate in Science in Network Systems Technology</b> here at State College of Florida. My studies are
+         helping me develop a foundation in networking, computers, and information technology while giving me a better understanding of how
+         different systems communicate and work together. After completing my associate degree, I plan to transfer to Florida Polytechnic University
+         in Lakeland to pursue a bachelor's degree in <b><i>Computer Science</i></b>.
+      </p>
+
+      <p>
+         My long-term goal is to continue developing my technical knowledge and use my education to build a career working with computers and
+         technology. I plan to continue developing my skills in programming, networking, cybersecurity, and other areas of computer science.
+      </p>
+
+      <p>
+         I am looking forward to learning more about <span>HTML and web development</span> and adding these skills to my
+         technology background. Building this website is giving me an opportunity to understand how web pages are created while also
+         creating something that can eventually become part of my professional portfolio.
+      </p>
+
+      <h2>Useful Technology Resource</h2>
+
+      <p>
+         One website I find useful for learning about technology and computer
+         science is
+         <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
+         It provides tutorials and examples for HTML, CSS, JavaScript, and
+         other technologies that can be useful as I continue learning web
+         development.
+      </p>
+
+      <p>
+         <a href="#interests">Jump to My Interests</a><br />
+         <a href="#education">Jump to Educational Goals</a><br />
+         <a href="#contact">Jump to Contact Information</a>
+      </p>
+
+   </main>
+
+   <footer id="contact">
+
+      <h2>Contact</h2>
+
+      <p>
+         Email:
+         <a href="mailto:dbiery1@student.scf.edu">dbiery1@student.scf.edu</a><br />
+
+         Phone:
+         <a href="tel:+18005550100">800-555-0100</a>
+      </p>
+
+      <p>
+         <a href="#interests">Back to My Interests</a> |
+         <a href="#education">Back to Education</a> |
+         <a href="index.html">Back to Home</a>
+      </p>
+
+   </footer>
+
+   </div>
 
 </body>
 </html>
