@@ -1,247 +1,440 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-   <title>About DJ</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="author" content="Prof Winters">
-   <meta name="description" content="Web Page">
-   <meta name="keywords" content="HTML tags, Web code, web programming">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <style>
-      * { box-sizing: border-box; }
+    <meta name="author" content="DJ Biery">
+    <meta name="description" content="About DJ, a college student interested in computers, technology, networking, and cybersecurity.">
+    <meta name="keywords" content="HTML, web development, computers, technology, cybersecurity">
 
-      body {
-         margin: 0;
-         background-image: url(images/technology-background.jpg);
-         background-size: cover;
-         background-position: center;
-         background-attachment: fixed;
-         color: #000000;
-         font-family: Arial, Helvetica, sans-serif;
-      }
+    <title>About DJ</title>
 
-      .site {
-         width: 92%;
-         max-width: 1150px;
-         margin: 25px auto;
-         background: rgba(255,255,255,0.96);
-         box-shadow: 0 4px 18px rgba(0,0,0,0.35);
-      }
+    <style>
+        /* Basic page styling */
+        * {
+            box-sizing: border-box;
+        }
 
-      .banner {
-         width: 100%;
-         display: block;
-         height: 230px;
-         object-fit: cover;
-      }
+        body {
+            width: 92%;
+            max-width: 1150px;
+            margin: 25px auto;
+            background-image: url("images/technology-background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #222222;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-      nav {
-         background: #1e3a5f;
-         padding: 14px 10px;
-         text-align: center;
-         border-bottom: 4px solid #2563a6;
-      }
+        #wrapper {
+            background-color: rgba(255, 255, 255, 0.96);
+            border: 2px solid #1e3a5f;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+        }
 
-      nav a {
-         color: #ffffff;
-         text-decoration: none;
-         font-weight: bold;
-         padding: 10px 22px;
-         margin: 0 4px;
-         display: inline-block;
-      }
+        /* Header and navigation styling */
+        header {
+            text-align: center;
+            background-color: #1e3a5f;
+            color: white;
+            padding-bottom: 15px;
+        }
 
-      nav a:hover {
-         background: #2563a6;
-      }
+        header img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
 
-      main, footer {
-         padding: 10px 40px;
-      }
+        h1 {
+            font-size: 36px;
+            margin: 15px 0 5px 0;
+        }
 
-      h1 {
-         text-align: center;
-         color: #1e3a5f;
-         font-family: Georgia, "Times New Roman", serif;
-         font-size: 38px;
-         margin: 22px 0 12px;
-      }
+        h2 {
+            color: #1e3a5f;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 5px;
+        }
 
-      h2 {
-         color: #1e3a5f;
-         font-family: Georgia, "Times New Roman", serif;
-         text-align: center;
-         margin-top: 28px;
-      }
+        nav {
+            background-color: #222222;
+            text-align: center;
+            padding: 12px;
+        }
 
-      p {
-         line-height: 1.5;
-      }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 18px;
+        }
 
-      hr {
-         border: 0;
-         height: 4px;
-         background: #6b7280;
-         width: 60%;
-         margin: 28px auto;
-      }
+        nav a:hover {
+            color: #66ccff;
+            text-decoration: underline;
+        }
 
-      .interest-images {
-         text-align: center;
-         margin: 20px 0;
-      }
+        main {
+            padding: 25px;
+        }
 
-      .interest-images img {
-         width: 30%;
-         height: 220px;
-         object-fit: cover;
-         margin: 1%;
-         vertical-align: top;
-         border: 3px solid #1e3a5f;
-      }
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
 
-      .welcome-image {
-         max-width: 360px;
-         height: auto;
-         float: right;
-         margin: 0 0 15px 25px;
-         border: 3px solid #1e3a5f;
-      }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-      footer {
-         background: #e5e7eb;
-         border-top: 4px solid #1e3a5f;
-         margin-top: 30px;
-         padding-bottom: 25px;
-      }
+        /* Interest image layout */
+        .interest-images {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-      @media (max-width: 700px) {
-         .site { width: 96%; }
-         main, footer { padding: 10px 20px; }
-         .banner { height: 170px; }
-         .interest-images img { width: 90%; height: auto; }
-         .welcome-image { float: none; max-width: 100%; margin: 10px auto; display: block; }
-      }
-   </style>
+        .interest-images a {
+            display: inline-block;
+            width: 23%;
+            margin: 0.5%;
+        }
 
-   <!-- Created on August 18, 2026 -->
+        .interest-images img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 3px solid #1e3a5f;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .interest-images img:hover {
+            opacity: 0.8;
+        }
+
+        .important {
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+
+        #social {
+            background-color: #eeeeee;
+            border-top: 2px solid #1e3a5f;
+            border-bottom: 2px solid #1e3a5f;
+            padding: 15px 25px;
+        }
+
+        #social p {
+            margin: 0;
+        }
+
+        #social a {
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+
+        .svg-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .tech-svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .svg-screen {
+            fill: #1e3a5f;
+            stroke: #111111;
+            stroke-width: 3;
+        }
+
+        .svg-display {
+            fill: #4ca6d8;
+        }
+
+        .svg-stand {
+            fill: #1e3a5f;
+        }
+
+        .svg-text {
+            fill: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+         footer a:hover {
+            color: #66ccff;
+            text-decoration: underline;
+         }
+
+        /* Make the layout work better on smaller screens */
+        @media screen and (max-width: 700px) {
+            body {
+                width: 96%;
+                margin: 10px auto;
+            }
+
+            header img {
+                height: 160px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .interest-images a {
+                width: 46%;
+                margin: 1%;
+            }
+
+            .interest-images img {
+                height: 180px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-   <div class="site">
+    <!-- Main website contents -->
+    <div id="wrapper">
 
-   <header>
-      <img class="banner" src="images/technology-foreground.jpg" alt="Technology workstation with computer equipment">
-      <h1>About DJ</h1>
-   </header>
+        <header id="top">
+            <img src="images/technology-foreground.jpg" alt="Technology themed banner">
 
-   <nav>
-      <a href="#interests">My Interests</a>
-      <a href="#education">Educational Goals</a>
-      <a href="#contact">Contact</a>
-   </nav>
+            <h1>About DJ</h1>
 
-   <main>
+            <p>
+                Computers, technology, networking, and learning new things.
+            </p>
+        </header>
 
-      <h2>Welcome</h2>
+        <nav>
+            <a href="#interests">My Interests</a>
+            <a href="#education">Education</a>
+            <a href="#technology">Technology</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-      <div>
+        <main>
 
-      <p>
-         My name is DJ, and I am a college student with a strong interest in computers, technology, and cybersecurity. I have always enjoyed
-         learning how technology works and finding ways to solve problems using computers and other electronic devices. My goal is to continue
-         building my technical skills through college, personal projects, and hands-on experience.
-      </p>
+            <!-- Welcome section -->
+            <section>
+                <h2>Welcome</h2>
 
-      <h2 id="interests">My Interests</h2>
-      <div class="interest-images">
-         <img src="images/computer-hardware.jpg" alt="Computer hardware" >
-         <img src="images/car.png" alt="Car representing an interest in automobiles" >
-         <img src="images/3d-printing.jpg" alt="3D printer creating a printed object" >
-         <img src="images/computer-technology.jpg" alt="Computer technology and workstation" >
-      </div>
-      <hr>
+                <p>
+                    My name is DJ and I am a college student interested in computers,
+                    technology, networking, and cybersecurity. I enjoy learning how
+                    computers work and figuring out how different technologies can
+                    be used to solve problems.
+                </p>
 
-      <p>
-         Some of my main interests include:
-      </p>
-      <ul>
-         <li>Building and working with computers</li>
-         <li>Learning about computer hardware and software</li>
-         <li>Exploring different areas of information technology</li>
-         <li>Working on technology-related projects outside of school</li>
-         <li>Learning through hands-on experimentation and problem solving</li>
-      </ul>
+                <p>
+                    I also enjoy working on projects that allow me to build and
+                    experiment with technology instead of just reading about it.
+                </p>
+            </section>
 
-      <p>
-         Outside of my college coursework, I enjoy several different hobbies and interests that involve technology and hands-on projects. I like
-         working on computers, experimenting with electronics, learning about cars, and working with 3D printing. These hobbies give me a chance to
-         learn through experimentation and problem solving rather than only learning from a textbook. I also enjoy discovering new technologies
-         and understanding how they can be used to create useful or interesting projects.
-      </p>
+            <hr>
 
-      <h2 id="education">My Educational Goals</h2>
+            <!-- My interests section -->
+            <section id="interests">
 
-      <p>
-         I am currently earning an <b>Associate in Science in Network Systems Technology</b> here at State College of Florida. My studies are
-         helping me develop a foundation in networking, computers, and information technology while giving me a better understanding of how
-         different systems communicate and work together. After completing my associate degree, I plan to transfer to Florida Polytechnic University
-         in Lakeland to pursue a bachelor's degree in <b><i>Computer Science</i></b>.
-      </p>
+                <h2>My Interests</h2>
 
-      <p>
-         My long-term goal is to continue developing my technical knowledge and use my education to build a career working with computers and
-         technology. I plan to continue developing my skills in programming, networking, cybersecurity, and other areas of computer science.
-      </p>
+                <div class="interest-images">
 
-      <p>
-         I am looking forward to learning more about <span>HTML and web development</span> and adding these skills to my
-         technology background. Building this website is giving me an opportunity to understand how web pages are created while also
-         creating something that can eventually become part of my professional portfolio.
-      </p>
+                    <a href="images/computer-hardware.jpg">
+                       <img src="images/computer-hardware.jpg" alt="Computer hardware">
+                     </a>
 
-      <h2>Useful Technology Resource</h2>
+                     <a href="images/car.png">
+                        <img src="images/car.png" alt="Car representing an interest in automobiles">
+                     </a>
 
-      <p>
-         One website I find useful for learning about technology and computer
-         science is
-         <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
-         It provides tutorials and examples for HTML, CSS, JavaScript, and
-         other technologies that can be useful as I continue learning web
-         development.
-      </p>
+                     <a href="images/3d-printing.jpg">
+                        <img src="images/3d-printing.jpg" alt="3D printer creating a printed object">
+                     </a>
 
-      <p>
-         <a href="#interests">Jump to My Interests</a><br />
-         <a href="#education">Jump to Educational Goals</a><br />
-         <a href="#contact">Jump to Contact Information</a>
-      </p>
+                    <a href="images/computer-technology.jpg">
+                        <img src="images/computer-technology.jpg" alt="Computer technology and workstation">
+                       </a>
 
-   </main>
 
-   <footer id="contact">
+                </div> <!-- close interest-images -->
 
-      <h2>Contact</h2>
+                <p>
+                    Some of my main interests include:
+                </p>
 
-      <p>
-         Email:
-         <a href="mailto:dbiery1@student.scf.edu">dbiery1@student.scf.edu</a><br />
+                <ul>
+                    <li>Building and upgrading computers</li>
+                    <li>Networking and cybersecurity</li>
+                    <li>Website development</li>
+                    <li>3D printing and CAD design</li>
+                    <li>Automotive technology and modifications</li>
+                </ul>
 
-         Phone:
-         <a href="tel:+18005550100">800-555-0100</a>
-      </p>
+                <p>
+                    I enjoy projects where I can learn something new and then
+                    actually apply what I learned to a real project.
+                </p>
 
-      <p>
-         <a href="#interests">Back to My Interests</a> |
-         <a href="#education">Back to Education</a> |
-         <a href="index.html">Back to Home</a>
-      </p>
+            </section>
 
-   </footer>
+            <hr>
 
-   </div>
+            <!-- Education section -->
+            <section id="education">
+
+                <h2>My Educational Goals</h2>
+
+                <p>
+                    I am currently working toward an Associate in Science degree
+                    in Network Systems Technology at State College of Florida.
+                    My goal is to continue my education and earn a bachelor's
+                    degree in Computer Science.
+                </p>
+
+                <p>
+                    I am especially interested in networking, computer systems,
+                    programming, and cybersecurity. My goal is to build a career
+                    where I can continue working with technology and solving
+                    technical problems.
+                </p>
+
+                <p>
+                    <span class="important">
+                        My main goal is to keep learning and build a career in technology.
+                    </span>
+                </p>
+
+            </section>
+
+            <hr>
+
+            <!-- SVG technology graphic -->
+            <section id="technology">
+
+                <h2>Technology SVG</h2>
+
+                <p>
+                    The SVG below is a simple computer graphic representing my
+                    interest in technology and computers.
+                </p>
+
+                <div class="svg-box">
+
+                    <svg class="tech-svg"
+                        width="180"
+                        height="120"
+                        viewBox="0 0 180 120"
+                        role="img"
+                        aria-label="Computer technology graphic">
+
+                        <title>Computer technology graphic</title>
+
+                        <rect class="svg-screen"
+                            x="20"
+                            y="15"
+                            width="140"
+                            height="75"
+                            rx="6">
+                        </rect>
+
+                        <rect class="svg-display"
+                            x="30"
+                            y="25"
+                            width="120"
+                            height="55"
+                            rx="3">
+                        </rect>
+
+                        <rect class="svg-stand"
+                            x="75"
+                            y="90"
+                            width="30"
+                            height="8">
+                        </rect>
+
+                        <text class="svg-text"
+                            x="90"
+                            y="58"
+                            text-anchor="middle">
+                            HTML
+                        </text>
+
+                    </svg>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Technology resource -->
+        <div id="social">
+
+            <p>
+                Useful Technology Resource:
+                <a href="https://www.w3schools.com/"
+                    target="_blank"
+                    rel="noopener">
+                    W3Schools
+                </a>
+            </p>
+
+        </div>
+
+        <footer id="contact">
+
+            <p>
+                Contact: DJ Biery
+            </p>
+
+            <p>
+                Email: <a href="mailto:dbiery@floridastatecollege.edu">
+                    dbiery@floridastatecollege.edu
+                </a>
+            </p>
+
+            <p>
+                State College of Florida
+            </p>
+
+            <p>
+                Web Page Development
+            </p>
+
+        </footer>
+
+    </div>
 
 </body>
 </html>
