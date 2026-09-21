@@ -11,213 +11,7 @@
 
     <title>About DJ</title>
 
-    <style>
-        /* Basic page styling */
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 92%;
-            max-width: 1150px;
-            margin: 25px auto;
-            background-image: url("images/technology-background.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #222222;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #wrapper {
-            background-color: rgba(255, 255, 255, 0.96);
-            border: 2px solid #1e3a5f;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-        }
-
-        /* Header and navigation styling */
-        header {
-            text-align: center;
-            background-color: #1e3a5f;
-            color: white;
-            padding-bottom: 15px;
-        }
-
-        header img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin: 15px 0 5px 0;
-        }
-
-        h2 {
-            color: #1e3a5f;
-            border-bottom: 2px solid #1e3a5f;
-            padding-bottom: 5px;
-        }
-
-        nav {
-            background-color: #222222;
-            text-align: center;
-            padding: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0 18px;
-        }
-
-        nav a:hover {
-            color: #66ccff;
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 25px;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Interest image layout */
-        .interest-images {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .interest-images a {
-            display: inline-block;
-            width: 23%;
-            margin: 0.5%;
-        }
-
-        .interest-images img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border: 3px solid #1e3a5f;
-            border-radius: 6px;
-            display: block;
-        }
-
-        .interest-images img:hover {
-            opacity: 0.8;
-        }
-
-        .important {
-            color: #1e3a5f;
-            font-weight: bold;
-        }
-
-        #social {
-            background-color: #eeeeee;
-            border-top: 2px solid #1e3a5f;
-            border-bottom: 2px solid #1e3a5f;
-            padding: 15px 25px;
-        }
-
-        #social p {
-            margin: 0;
-        }
-
-        #social a {
-            color: #1e3a5f;
-            font-weight: bold;
-        }
-
-        .svg-box {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .tech-svg {
-            display: block;
-            margin: 0 auto;
-        }
-
-        .svg-screen {
-            fill: #1e3a5f;
-            stroke: #111111;
-            stroke-width: 3;
-        }
-
-        .svg-display {
-            fill: #4ca6d8;
-        }
-
-        .svg-stand {
-            fill: #1e3a5f;
-        }
-
-        .svg-text {
-            fill: white;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #1e3a5f;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        footer p {
-            margin: 5px;
-            font-size: 15px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-         footer a:hover {
-            color: #66ccff;
-            text-decoration: underline;
-         }
-
-        /* Make the layout work better on smaller screens */
-        @media screen and (max-width: 700px) {
-            body {
-                width: 96%;
-                margin: 10px auto;
-            }
-
-            header img {
-                height: 160px;
-            }
-
-            nav a {
-                display: block;
-                margin: 8px;
-            }
-
-            .interest-images a {
-                width: 46%;
-                margin: 1%;
-            }
-
-            .interest-images img {
-                height: 180px;
-            }
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -236,10 +30,11 @@
         </header>
 
         <nav>
-            <a href="#interests">My Interests</a>
-            <a href="#education">Education</a>
-            <a href="#technology">Technology</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html"><span class="selected">Home</span></a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <main>
@@ -410,7 +205,7 @@
                 </a>
             </p>
 
-        </div>
+        </div> <!-- close social -->
 
         <footer id="contact">
 
@@ -419,8 +214,8 @@
             </p>
 
             <p>
-                Email: <a href="mailto:dbiery@floridastatecollege.edu">
-                    dbiery@floridastatecollege.edu
+                Email: <a href="mailto:dbiery1@student.scf.edu">
+                    dbiery1@student.scf.edu
                 </a>
             </p>
 
@@ -434,7 +229,7 @@
 
         </footer>
 
-    </div>
+    </div> <!-- close wrapper -->
 
 </body>
 </html>
