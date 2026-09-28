@@ -69,20 +69,53 @@
         nav {
             background-color: #222222;
             text-align: center;
-            padding: 12px;
+            padding: 0;
         }
 
-        nav a {
+        /* Navigation list: supports the rubric's ul/li structure */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Works with both the original direct-link nav and the ul/li nav */
+        nav > a {
+            display: inline-block;
             color: white;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            margin: 0 18px;
+            margin: 0;
+            padding: 12px 18px;
         }
 
-        nav a:hover {
+        nav ul a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            padding: 12px 18px;
+        }
+
+        nav > a:hover,
+        nav ul a:hover {
             color: #66ccff;
             text-decoration: underline;
+        }
+
+        nav .selected {
+            color: #66ccff;
         }
 
         main {
@@ -208,9 +241,29 @@
                 height: 160px;
             }
 
-            nav a {
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav li {
+                width: 100%;
+            }
+
+            nav > a {
                 display: block;
-                margin: 8px;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 12px;
+            }
+
+            nav ul a {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 12px;
             }
 
             .interest-images a {
@@ -303,4 +356,21 @@ abbr {
         border-right: 0;
         border-bottom: 2px solid #1e3a5f;
     }
+}
+
+
+/* Assignment 07: Transcript & Lists */
+.transcript-main h3 { color: #222222; margin-bottom: 8px; }
+.course-list, .recommendation-list, .reference-list { line-height: 1.8; padding-left: 30px; }
+.course-list { list-style-type: square; }
+.recommendation-list { list-style-image: url("images/list-bullet.svg"); }
+.reference-list { list-style-type: upper-roman; }
+.certification-list dt { font-weight: bold; color: #1e3a5f; margin-top: 12px; }
+.certification-list dd { margin: 4px 0 12px 22px; line-height: 1.6; }
+.transcript-note { font-size: 0.9em; color: #555555; font-style: italic; }
+.special-character { color: purple; font-weight: bold; font-size: 1.3em; }
+.transcript-link { margin: 22px 0 0; padding: 12px; text-align: center; border: 1px solid #1e3a5f; background-color: #eef4f8; }
+@media screen and (max-width: 700px) {
+    .transcript-main { padding: 18px; }
+    .course-list, .recommendation-list, .reference-list { padding-left: 24px; }
 }
