@@ -374,3 +374,96 @@ abbr {
     .transcript-main { padding: 18px; }
     .course-list, .recommendation-list, .reference-list { padding-left: 24px; }
 }
+
+/* ========================================
+   PORTFOLIO PAGE
+   ======================================== */
+
+
+   /* Portfolio main content */
+main {
+    background-color: rgba(184, 183, 183, 0.95);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 25px auto;
+}
+
+.portfolio-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.portfolio-card figure {
+    margin: 0;
+    width: 100%;
+}
+
+.portfolio-card img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.portfolio-card figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.portfolio-card h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    line-height: 1.5;
+}
+
+/* Live website link */
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: #222;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background-color: #66ccff;
+    color: #111111;
+}
+
+/* Selected navigation link */
+
+nav ul a.selected {
+    color: #66ccff;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   RESPONSIVE PORTFOLIO
+   ======================================== */
+
+@media only screen and (min-width: 720px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
