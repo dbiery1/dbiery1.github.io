@@ -3,51 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page currently under development.">
-    <title>Page Under Development - DJ Biery</title>
+
+    <title>Portfolio | DJ</title>
+
+    <meta name="description" content="DJ Biery's technology portfolio featuring web development, computer hardware, networking, Linux, Python programming, and 3D printing projects.">
+
+    <meta name="keywords" content="DJ Biery, portfolio, web development, HTML, CSS, computer hardware, networking, Linux, Python, 3D printing">
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
-    <div id="wrapper">
+    <header>
+        <img src="images/technology-foreground.jpg"
+             alt="Technology themed banner">
 
-        <header>
-            <h1>DJ Biery</h1>
-            <p>Computer Technology</p>
-        </header>
+        <h1>DJ Biery</h1>
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section>
-                <h2>Error 404</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html" class="selected">Portfolio</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="transcript.html">Transcript</a></li>
+        </ul>
+    </nav>
 
-                <h3>This Page Is Under Development</h3>
+    <main>
+
+        <section>
+            <h2>My Portfolio</h2>
+
+            <p>
+                This portfolio showcases projects and hands-on experience
+                involving web development, computer hardware, networking,
+                Linux, programming, and 3D printing.
+            </p>
+        </section>
+
+        <section class="portfolio-grid">
+
+            <!-- Personal Website -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-website.jpg"
+                         alt="Personal website project">
+                    <figcaption>Personal Website</figcaption>
+                </figure>
+
+                <h2>Personal Website</h2>
 
                 <p>
-                    This page is currently under development.
-                    Please be patient while the site is being completed.
+                    A multi-page personal website created using HTML5 and CSS.
+                    The website demonstrates responsive web design, navigation,
+                    page organization, and GitHub Pages hosting.
                 </p>
 
                 <p>
-                    <a href="index.html">Return to the Home Page</a>
+                    <strong>Skills:</strong>
+                    HTML5, CSS, Responsive Web Design, GitHub Pages
                 </p>
-            </section>
-        </main>
 
-        <footer>
-            <p>&copy; 2026 DJ Biery</p>
-        </footer>
+                <a class="project-link"
+                   href="https://dbiery1.github.io/index.html"
+                   target="_blank"
+                   rel="noopener">
+                    View Live Website
+                </a>
+            </article>
 
-    </div> <!-- End of wrapper -->
+
+            <!-- Custom PC Build -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-pc-build.jpg"
+                         alt="Custom built desktop computer">
+                    <figcaption>Custom PC Build</figcaption>
+                </figure>
+
+                <h2>Custom PC Build</h2>
+
+                <p>
+                    A custom-built desktop computer assembled with a focus on
+                    performance and hardware compatibility.
+                </p>
+
+                <p>
+                    <strong>Hardware:</strong>
+                    Intel Core i7-12700K, ASUS ROG Strix B760-A Gaming WiFi,
+                    Corsair Vengeance LPX DDR4-2666, and Gigabyte Vision
+                    RTX 3080 OC.
+                </p>
+            </article>
+
+
+            <!-- PC Audio Repair -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-audio-repair.jpg"
+                         alt="PC audio hardware repair project">
+                    <figcaption>PC Audio Troubleshooting &amp; Hardware Repair</figcaption>
+                </figure>
+
+                <h2>PC Audio Troubleshooting &amp; Hardware Repair</h2>
+
+                <p>
+                    Troubleshot a custom-built PC after its onboard audio
+                    stopped functioning. Driver updates, reinstallations,
+                    output changes, and physical connection checks did not
+                    resolve the problem.
+                </p>
+
+                <p>
+                    The onboard audio was determined to be the likely failed
+                    component. An ASUS XONAR SE 5.1 Channel sound card was
+                    installed, restoring audio functionality.
+                </p>
+            </article>
+
+
+            <!-- Home Server -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-home-server.jpg"
+                         alt="Home server and media network">
+                    <figcaption>Home Server &amp; Media Network</figcaption>
+                </figure>
+
+                <h2>Home Server &amp; Media Network</h2>
+
+                <p>
+                    A home server built using a Ryzen 3 3200G, 8 GB of DDR4
+                    memory, and approximately 4 TB of storage.
+                </p>
+
+                <p>
+                    The server runs CasaOS and Linux-based services and is
+                    used for family photos, files, music, and movie streaming
+                    through Jellyfin.
+                </p>
+            </article>
+
+
+            <!-- Linux VM -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-linux-vm.jpg"
+                         alt="Linux virtual machine and networking project">
+                    <figcaption>Linux Virtual Machine &amp; Networking</figcaption>
+                </figure>
+
+                <h2>Linux Virtual Machine &amp; Networking</h2>
+
+                <p>
+                    Hands-on experience creating and working with Linux virtual
+                    machines, including Ubuntu and other Linux distributions,
+                    while studying networking concepts.
+                </p>
+
+                <p>
+                    This project provided practical experience with Linux
+                    administration, virtual machines, and networking
+                    fundamentals.
+                </p>
+            </article>
+
+
+            <!-- Python -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-python.jpg"
+                         alt="Python programming project">
+                    <figcaption>Python Programming</figcaption>
+                </figure>
+
+                <h2>Python Programming</h2>
+
+                <p>
+                    A programming project demonstrating experience with Python
+                    programming concepts learned through coursework.
+                </p>
+
+                <p>
+                    <strong>Skills:</strong>
+                    Python programming, problem solving, and programming
+                    fundamentals.
+                </p>
+            </article>
+
+
+            <!-- 3D Printed Caliper -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-brake-led-lamp.jpg"
+                         alt="3D printed caliper">
+                    <figcaption>3D-Printed Caliper</figcaption>
+                </figure>
+
+                <h2>3D-Printed Caliper</h2>
+
+                <p>
+                    A 3D-printed caliper project demonstrating CAD design,
+                    3D printing, and the process of turning a digital design
+                    into a physical object.
+                </p>
+            </article>
+
+
+            <!-- Coilover Lamp -->
+            <article class="portfolio-card">
+                <figure>
+                    <img src="images/portfolio-coilover-lamp.jpg"
+                         alt="3D printed car coilover lamp">
+                    <figcaption>3D-Printed Car Coilover Lamp</figcaption>
+                </figure>
+
+                <h2>3D-Printed Car Coilover Lamp</h2>
+
+                <p>
+                    A custom lamp based on an automotive coilover design.
+                    The project combines automotive-inspired design,
+                    3D printing, and lighting components.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJ Biery. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
