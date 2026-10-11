@@ -467,3 +467,39 @@ nav ul a.selected {
     }
 
 }
+
+/* Assignment 09 navigation states */
+nav a {
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover {
+    color: #66ccff;
+    text-decoration: underline;
+}
+
+nav a .selected {
+    color: #66ccff;
+    text-decoration: underline;
+    text-shadow: 0 0 6px rgba(102, 204, 255, 0.45);
+}
+
+@media screen and (max-width: 700px) {
+    .newsletter-title {
+        font-size: 27px;
+    }
+
+    .newsletter-image {
+        max-width: 100%;
+    }
+
+    blockquote {
+        margin: 20px 5px;
+        padding: 15px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+}
+
