@@ -732,3 +732,63 @@ nav a .selected {
         padding-right: 12px;
     }
 }
+
+/* Assignment 11 - Form Controls */
+
+.contact-table input[type="text"],
+.contact-table input[type="email"],
+.contact-table select,
+.contact-table textarea {
+    width: 90%;
+    max-width: 450px;
+    padding: 10px;
+    border: 2px solid #b8c7d1;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.contact-table input[type="text"]:focus,
+.contact-table input[type="email"]:focus,
+.contact-table select:focus,
+.contact-table textarea:focus {
+    border-color: #66ccff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 204, 255, 0.45);
+}
+
+.contact-table input[type="radio"],
+.contact-table input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.contact-table input[type="submit"],
+.contact-table input[type="reset"] {
+    padding: 10px 22px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-table input[type="submit"] {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+.contact-table input[type="reset"] {
+    background-color: #d9e2e8;
+    color: #1e3a5f;
+}
+
+.contact-table input[type="submit"]:hover,
+.contact-table input[type="reset"]:hover {
+    box-shadow: 0 0 7px rgba(102, 204, 255, 0.55);
+}
+
+.contact-table textarea {
+    resize: vertical;
+}
