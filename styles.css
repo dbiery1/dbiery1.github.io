@@ -792,3 +792,20 @@ nav a .selected {
 .contact-table textarea {
     resize: vertical;
 }
+
+nav ul a,
+nav > a,
+nav ul a:visited,
+nav > a:visited {
+    color: white;
+}
+
+nav ul a:hover,
+nav > a:hover {
+    color: #66ccff;
+}
+
+nav ul a.selected,
+nav > a.selected {
+    color: #66ccff;
+}
