@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact DJ Biery | Web Development Portfolio</title>
-    <meta name="description" content="Contact page for DJ Biery's web development portfolio.">
+    <meta name="author" content="DJ Biery">
+    <meta name="description" content="Contact DJ Biery through this web development portfolio contact form.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -13,10 +14,9 @@
 
 <div class="wrapper">
 
-    <header id="top">
-            <img src="images/technology-foreground.jpg" alt="Technology themed banner">
-            <h1>Biery Contact</h1>
-            <p>Contact ME</p>
+    <header>
+        <img src="images/technology-foreground.jpg" alt="Technology themed header image">
+        <h1>DJ Biery</h1>
     </header>
 
     <nav>
@@ -31,88 +31,181 @@
 
         <h2>Contact Me</h2>
 
-        <table class="contact-table">
+        <form name="contactForm" id="contactForm"
+              action="https://formsubmit.freedev.app/FormProcess.php"
+              method="post">
 
-            <tr>
-                <th colspan="2">Contact DJ Biery</th>
-            </tr>
+            <table class="contact-table">
 
-            <tr>
-                <td class="field-label"><span class="required">*</span> First Name</td>
-                <td>Future text box</td>
-            </tr>
+                <tr>
+                    <th colspan="2">Contact DJ Biery</th>
+                </tr>
 
-            <tr>
-                <td class="field-label"><span class="required">*</span> Last Name</td>
-                <td>Future text box</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <span class="required">*</span>
+                        <label for="FirstName">First Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="FirstName" id="FirstName"
+                               size="40" required>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label">City</td>
-                <td>Future text box</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <span class="required">*</span>
+                        <label for="LastName">Last Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="LastName" id="LastName"
+                               size="40" required>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label">ST</td>
-                <td>Future drop-down menu</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <label for="City">City</label>
+                    </td>
+                    <td>
+                        <input type="text" name="City" id="City" size="40">
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label">Zip</td>
-                <td>Future text box</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <label for="State">ST</label>
+                    </td>
+                    <td>
+                        <select name="State" id="State">
+                            <option value="FL" selected>Florida</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label"><span class="required">*</span> Email</td>
-                <td>Future text box</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <label for="Zip">Zip</label>
+                    </td>
+                    <td>
+                        <input type="text" name="Zip" id="Zip"
+                               pattern="[0-9]{5}" title="Five digit zip code"
+                               maxlength="5" size="10">
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label">Gender</td>
-                <td>Future radio buttons</td>
-            </tr>
+                <tr>
+                    <td class="field-label">
+                        <span class="required">*</span>
+                        <label for="Email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="Email" id="Email"
+                               size="40" required>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label">Education</td>
-                <td>Future selection buttons</td>
-            </tr>
+                <tr>
+                    <td class="field-label">Gender</td>
+                    <td>
+                        <input type="radio" name="Gender" id="M" value="M">
+                        <label for="M">Male</label>
 
-            <tr>
-                <td class="field-label">Comments</td>
-                <td>Future comments box</td>
-            </tr>
+                        <input type="radio" name="Gender" id="F" value="F">
+                        <label for="F">Female</label>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="field-label"></td>
-                <td>Future form buttons</td>
-            </tr>
+                <tr>
+                    <td class="field-label">Education</td>
+                    <td>
+                        <input type="checkbox" name="Education" id="HS" value="HS">
+                        <label for="HS">H.S.</label>
 
-        </table>
+                        <input type="checkbox" name="Education" id="College" value="College">
+                        <label for="College">College</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="field-label">
+                        <span class="required">*</span>
+                        <label for="Comments">Comments</label>
+                    </td>
+                    <td>
+                        <textarea name="Comments" id="Comments"
+                                  rows="5" cols="42"
+                                  placeholder="Enter your comments here..."
+                                  required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="field-label"></td>
+                    <td>
+                        <input type="reset" name="Reset" value="Reset">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
 
     </main>
 
-<footer id="contact">
-
-            <p>
-                DJ Biery
-            </p>
-
-            <p>
-                Email: <a href="mailto:dbiery1@student.scf.edu">
-                    dbiery1@student.scf.edu
-                </a>
-            </p>
-
-            <p>
-                State College of Florida
-            </p>
-
-            <p>
-                Web Page Development
-            </p>
-
-</footer>
-
+    <footer>
+        <p>&copy; 2026 DJ Biery. All rights reserved.</p>
+    </footer>
 
 </div> <!-- close wrapper -->
 
