@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Demonstrations | DJ Biery</title>
+    <meta name="author" content="DJ Biery">
+    <meta name="description" content="Interactive JavaScript demonstrations for DJ Biery's technology portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header id="top">
+        <img src="images/technology-foreground.jpg" alt="Technology themed header image">
+        <h1>JavaScript Demonstrations</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="contact.html">Contact</a>
+        <a href="js.html"><span class="selected">JavaScript</span></a>
+    </nav>
+
+    <main class="javascript-main">
+
+        <h2>JavaScript in Action</h2>
+
+        <p>
+            JavaScript adds interactive features to websites by allowing
+            pages to respond to visitors, perform calculations, and
+            dynamically display information. The following examples
+            demonstrate several ways JavaScript can be used in web development.
+        </p>
+
+        <section class="javascript-example">
+            <h2>1. Mouseover Event</h2>
+            <p>
+                Move your mouse over the link below to trigger a JavaScript
+                message.
+            </p>
+            <a href="#" id="mouseover-alert" class="js-demo-link">
+                Hover Over This Link
+            </a>
+        </section>
+
+        <section class="javascript-example">
+            <h2>2. JavaScript Alert</h2>
+            <p>
+                Click the button to display an alert about this portfolio.
+            </p>
+            <button type="button" id="alert-button">
+                About This Portfolio
+            </button>
+        </section>
+
+        <section class="javascript-example">
+            <h2>3. JavaScript Prompt</h2>
+            <p>
+                Enter your name to receive a personalized greeting.
+            </p>
+            <button type="button" id="prompt-button">
+                Enter Your Name
+            </button>
+            <p id="prompt-result" class="js-result">
+                Your greeting will appear here.
+            </p>
+        </section>
+
+        <section class="javascript-example">
+            <h2>4. Last Updated Date</h2>
+            <p>
+                JavaScript can retrieve the last modification date of a
+                webpage and display it automatically.
+            </p>
+
+            <p class="last-updated">
+                <script>
+                    var pageUpdate = new Date(document.lastModified);
+
+                    document.write("This page was last updated: " +
+                        (pageUpdate.getMonth() + 1) + "/" +
+                        pageUpdate.getDate() + "/" +
+                        pageUpdate.getFullYear());
+                </script>
+            </p>
+        </section>
+
+        <section class="javascript-example">
+            <h2>5. PC Power Supply Calculator</h2>
+            <p>
+                Enter estimated power usage for computer components.
+                The calculator adds 20 percent extra capacity to provide
+                a basic power supply recommendation.
+            </p>
+
+            <form id="power-form">
+
+                <label for="cpu-watts">CPU Power (Watts)</label>
+                <input type="number" id="cpu-watts"
+                       min="0" value="190" required>
+
+                <label for="gpu-watts">GPU Power (Watts)</label>
+                <input type="number" id="gpu-watts"
+                       min="0" value="320" required>
+
+                <label for="other-watts">Other Components (Watts)</label>
+                <input type="number" id="other-watts"
+                       min="0" value="100" required>
+
+                <button type="submit">Calculate Power Supply</button>
+
+            </form>
+
+            <p id="power-result" class="js-result">
+                Your result will appear here.
+            </p>
+        </section>
+<!-- Assignment #6: Internal JavaScript image slideshow. -->
+<!-- Source: Original JavaScript written for this assignment. -->
+<!-- Purpose: Allows visitors to cycle through portfolio images -->
+<!-- using Previous and Next buttons while updating the image caption. -->
+        <section class="javascript-example">
+            <h2>6. Internal JavaScript Slideshow</h2>
+            <p>
+                Use the buttons to switch between two projects from
+                this portfolio.
+            </p>
+
+            <figure class="js-slideshow">
+                <img id="project-slide"
+                     src="images/portfolio-pc-build.jpg"
+                     alt="Custom desktop PC build">
+
+                <figcaption id="project-caption">
+                    Custom Desktop PC Build
+                </figcaption>
+            </figure>
+
+            <div class="js-controls">
+                <button type="button" id="previous-slide">
+                    Previous Image
+                </button>
+
+                <button type="button" id="next-slide">
+                    Next Image
+                </button>
+            </div>
+
+            <script>
+                // Internal JavaScript image slideshow.
+
+                var projectImages = [
+                    {
+                        src: "images/portfolio-pc-build.jpg",
+                        alt: "Custom desktop PC build",
+                        caption: "Custom Desktop PC Build"
+                    },
+                    {
+                        src: "images/portfolio-home-server.jpg",
+                        alt: "Home server and network storage project",
+                        caption: "Home Server Project"
+                    }
+                ];
+
+                var currentProject = 0;
+
+                function showProject(index) {
+
+                    currentProject =
+                        (index + projectImages.length) %
+                        projectImages.length;
+
+                    document.getElementById("project-slide").src =
+                        projectImages[currentProject].src;
+
+                    document.getElementById("project-slide").alt =
+                        projectImages[currentProject].alt;
+
+                    document.getElementById("project-caption").textContent =
+                        projectImages[currentProject].caption;
+                }
+
+                document.getElementById("previous-slide")
+                    .addEventListener("click", function() {
+                        showProject(currentProject - 1);
+                    });
+
+                document.getElementById("next-slide")
+                    .addEventListener("click", function() {
+                        showProject(currentProject + 1);
+                    });
+            </script>
+        </section>
+
+        <section class="javascript-example">
+            <h2>7. External JavaScript</h2>
+            <p>
+                This feature uses a separate JavaScript file to display
+                computer-building tips.
+            </p>
+
+            <div class="tip-display">
+                <p id="pc-tip">Loading a computer-building tip...</p>
+
+                <button type="button" id="next-tip">
+                    Show Next Tip
+                </button>
+            </div>
+        </section>
+
+        <section class="javascript-example">
+            <h2>8. JavaScript Popup Window</h2>
+            <p>
+                Click below to open a separate window containing
+                computer maintenance reminders.
+            </p>
+
+            <button type="button" id="popup-button">
+                Open Maintenance Reminder
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJ Biery. All rights reserved.</p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+</div> <!-- close wrapper -->
+
+<script src="scripts/site-interactions.js"></script>
+
+<script>
+    // 1. Mouseover event.
+    document.getElementById("mouseover-alert")
+        .addEventListener("mouseenter", function(event) {
+
+            event.preventDefault();
+
+            if (!this.dataset.alertShown) {
+                alert("Welcome to DJ Biery's technology portfolio!");
+                this.dataset.alertShown = "true";
+            }
+        });
+
+    // 2. Alert button.
+    document.getElementById("alert-button")
+        .addEventListener("click", function() {
+
+            alert("This portfolio highlights my interests in computer hardware, networking, and cybersecurity.");
+        });
+
+    // 3. Prompt and personalized response.
+    document.getElementById("prompt-button")
+        .addEventListener("click", function() {
+
+            var visitorName = prompt("What is your name?");
+            var result = document.getElementById("prompt-result");
+
+            if (visitorName === null) {
+                result.textContent = "You cancelled the greeting.";
+            }
+            else if (visitorName.trim() === "") {
+                result.textContent = "Please enter a name.";
+            }
+            else {
+                result.textContent =
+                    "Welcome, " + visitorName.trim() +
+                    "! Thanks for exploring my portfolio.";
+            }
+        });
+
+    // 5. Power supply calculator.
+    document.getElementById("power-form")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            var cpu = Number(document.getElementById("cpu-watts").value);
+            var gpu = Number(document.getElementById("gpu-watts").value);
+            var other = Number(document.getElementById("other-watts").value);
+
+            var total = cpu + gpu + other;
+            var recommended = Math.ceil((total * 1.20) / 50) * 50;
+
+            document.getElementById("power-result").textContent =
+                "Estimated system load: " + total +
+                " watts. Recommended power supply capacity: " +
+                recommended + " watts or higher.";
+        });
+
+    // 8. Popup window.
+    document.getElementById("popup-button")
+        .addEventListener("click", function() {
+
+            var popup = window.open(
+                "",
+                "maintenanceReminder",
+                "width=460,height=320,resizable=yes,scrollbars=yes"
+            );
+
+            if (!popup) {
+                alert("Your browser blocked the popup. Allow popups and try again.");
+                return;
+            }
+
+            popup.document.write(
+                "<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>" +
+                "<title>PC Maintenance Reminder</title>" +
+                "<style>body{font-family:Arial;padding:24px;background:#eef4f8;color:#1e3a5f}" +
+                "h1{font-size:24px}li{margin:12px 0}</style></head><body>" +
+                "<h1>PC Maintenance Reminder</h1>" +
+                "<p>Habits that help keep a computer reliable:</p>" +
+                "<ul><li>Clean dust filters and fans.</li>" +
+                "<li>Monitor CPU and GPU temperatures.</li>" +
+                "<li>Install operating system and driver updates.</li>" +
+                "<li>Back up important files regularly.</li></ul>" +
+                "</body></html>"
+            );
+
+            popup.document.close();
+        });
+</script>
+
+</body>
+</html>
