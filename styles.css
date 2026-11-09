@@ -216,6 +216,7 @@
         }
 
         footer p {
+            color: white;
             margin: 5px;
             font-size: 15px;
         }
@@ -228,6 +229,9 @@
          footer a:hover {
             color: #66ccff;
             text-decoration: underline;
+         }
+        footer span {
+        color: white;
          }
 
         /* Make the layout work better on smaller screens */
@@ -808,4 +812,151 @@ nav > a:hover {
 nav ul a.selected,
 nav > a.selected {
     color: #66ccff;
+}
+
+
+/* Assignment #12 - JavaScript page */
+
+.javascript-main {
+    padding: 25px;
+}
+
+.javascript-main > h2 {
+    color: #1e3a5f;
+    font-size: 28px;
+}
+
+.javascript-example {
+    margin: 25px 0;
+    padding: 20px;
+    border: 2px solid #1e3a5f;
+    border-left: 6px solid #4ca6d8;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.96);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.javascript-example h2 {
+    margin-top: 0;
+    color: #1e3a5f;
+}
+
+.javascript-example button,
+.js-demo-link {
+    display: inline-block;
+    margin: 7px 5px 7px 0;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e3a5f;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.javascript-example button:hover,
+.js-demo-link:hover {
+    background-color: #66ccff;
+    color: #1e3a5f;
+}
+
+.javascript-example input {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    margin: 6px 0 14px;
+    padding: 9px;
+    border: 1px solid #9aabb8;
+    border-radius: 4px;
+}
+
+.javascript-example label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1e3a5f;
+}
+
+.js-result,
+.tip-display {
+    margin-top: 14px;
+    padding: 13px;
+    border-left: 4px solid #4ca6d8;
+    background-color: #eef4f8;
+    color: #1e3a5f;
+    font-weight: bold;
+}
+
+.last-updated {
+    color: #555;
+    font-size: 0.88em;
+}
+
+.js-slideshow {
+    margin: 15px auto;
+    text-align: center;
+}
+
+.js-slideshow img {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    max-height: 360px;
+    margin: auto;
+    object-fit: contain;
+    border: 3px solid #1e3a5f;
+    border-radius: 6px;
+}
+
+.js-slideshow figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #1e3a5f;
+}
+
+.js-controls {
+    text-align: center;
+}
+
+/* JavaScript-triggered navigation bounce */
+
+@keyframes jsNavBounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-8px);
+    }
+
+    65% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+nav a.js-nav-bounce {
+    animation: jsNavBounce 0.42s ease;
+}
+
+@media screen and (max-width: 700px) {
+
+    .javascript-main {
+        padding: 16px;
+    }
+
+    .javascript-example {
+        padding: 15px;
+    }
+}
+
+footer p.last-updated {
+    color: #ffffff !important;
+    font-style: italic;
+    margin-top: 20px;
 }
