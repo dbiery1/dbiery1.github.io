@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media Demonstrations | DJ Biery</title>
+
+    <meta name="description" content="Explore audio, video, animation, slideshows, and other interactive media featuring PC building and technology projects.">
+
+    <meta name="author" content="DJ Biery">
+
+    <link rel="stylesheet" href="styles.css">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/technology-foreground.jpg"
+             alt="Technology themed banner">
+
+        <h1>DJ Biery</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html" class="selected">Portfolio</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="js.html">JavaScript</a></li>
+        </ul>
+    </nav>
+
+
+<main class="media-main">
+
+    <h1>Media Demonstrations</h1>
+
+    <p class="media-intro">
+        Welcome to my media demonstration page! This page showcases
+        different types of digital media, including audio, video,
+        animation, interactive slideshows, and embedded content.
+        The examples focus on my interests in computers, technology,
+        and PC building.
+    </p>
+
+    <ol class="media-list">
+
+        <!-- 1. Audio -->
+        <li>
+            <h2>Audio Introduction</h2>
+
+            <p>
+                Listen to a short introduction to my technology
+                portfolio and PC-building interests.
+            </p>
+
+            <audio controls>
+                <source src="media/welcome-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio player.
+            </audio>
+        </li>
+
+        <!-- 2. Video -->
+        <li>
+            <h2>PC Build Video</h2>
+
+            <p>
+                A short video showcasing my desktop PC and its
+                hardware and lighting.
+            </p>
+
+            <video controls>
+                <source src="media/pc-walkthrough.mp4" type="video/mp4">
+                Your browser does not support the video player.
+            </video>
+        </li>
+
+        <!-- 3. Animated GIF -->
+        <li>
+            <h2>PC RGB Animation</h2>
+
+            <p>
+                An animated look at my PC's RGB lighting and hardware.
+            </p>
+
+            <img
+                src="media/rgb-vomit.gif"
+                alt="Animated view of my RGB-lit desktop PC"
+                class="media-gif">
+        </li>
+
+        <!-- 4. Slideshow -->
+        <li>
+            <h2>Technology Project Slideshow</h2>
+
+            <div class="media-slideshow">
+                <img id="media-slide"
+                    src="images/portfolio-pc-build.jpg"
+                    alt="Custom desktop PC build">
+
+                <p id="media-caption">Custom Desktop PC Build</p>
+
+                <div class="slideshow-controls">
+                    <button type="button" id="previous-slide">
+                        Previous
+                    </button>
+
+                    <button type="button" id="next-slide">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </li>
+
+        <!-- 5. Image Map -->
+        <li>
+            <h2>Interactive Image Map</h2>
+            <p>Click the highlighted area to return to the Home page.</p>
+
+            <div class="media-map-container">
+                <img
+                    src="images/CorvetteHood.jpg"
+                    alt="Technology image with a clickable Home page hotspot"
+                    id="home-map-image">
+
+                <a
+                    href="index.html"
+                    class="home-map-hotspot"
+                    aria-label="Return to Home page"
+                    title="Go to Home page"></a>
+            </div>
+        </li>
+
+        <!-- 6. YouTube -->
+        <li>
+            <h2>How to Build a Gaming PC</h2>
+            <p>This video demonstrates the process of building a desktop computer, including installing components and assembling the system.</p>
+
+            <div class="youtube-container">
+            <iframe
+                src="https://www.youtube.com/embed/DC-Xn2C_L1U"
+                title="How to Build a Gaming PC"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            </div>
+        </li>
+
+    </ol>
+
+</main>
+    
+
+
+    <footer id="contact">
+
+            <p>
+                DJ Biery
+            </p>
+
+            <p>
+                Email: <a href="mailto:dbiery1@student.scf.edu">
+                    dbiery1@student.scf.edu
+                </a>
+            </p>
+
+            <p>
+                State College of Florida
+            </p>
+
+            <p>
+                Web Page Development
+            </p>
+        <p class="last-updated">
+            <script>
+                var update = new Date(document.lastModified);
+
+                document.write("Last Updated - " +
+                    (update.getMonth() + 1) + "/" +
+                    update.getDate() + "/" +
+                    update.getFullYear());
+            </script>
+        </p>
+    </footer>
+
+    <script src="scripts/site-interactions.js"></script>
+    <script src="scripts/media-slideshow.js"></script>
+
+
+</body>
+
+</html>
